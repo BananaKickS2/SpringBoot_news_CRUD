@@ -1,0 +1,25 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+        </tr>
+    </thead>
+{{#article}}
+    <tbody>
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary" href="/articles">전체목록으로</a>
+<a class="btn btn-info" href="/articles/{{id}}/edit">게시글 수정</a>
+<a class="btn btn-danger" href="/articles/{{id}}/delete">게시글 삭제</a>
+{{/article}}
+
+{{>layouts/footer}}

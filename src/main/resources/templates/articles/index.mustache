@@ -1,0 +1,25 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#articleList}}                  <!--articleList 속성을 반복.-->
+    <tr>
+        <th scope="row">{{id}}</th>
+        <td><a href="articles/{{id}}">{{title}}</a></td>
+        <td>{{content}}</td>
+    </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+<a href="/articles/new">새 게시글 등록하기</a>
+
+{{>layouts/footer}}
